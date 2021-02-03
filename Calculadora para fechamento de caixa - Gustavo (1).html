@@ -1,0 +1,78 @@
+<meta charset="utf-8">
+<script>
+
+	var nota100 = 0, nota50 = 0, nota20 = 0, nota10 = 0, nota5 = 0, nota2 = 0, m1 = 0, m50 = 0, m25 = 0, m10 = 0, m5 = 0, cxtotal = 0, cartaototal = 0, sumtotal = 0, result1 = 0, retirada = 0, resp;
+
+	alert("Digite a quantidade de notas e moedas presentes no caixa ao todo! (Conte o juntamente com o fundo) \n \n ____________________________________ \nPressione Enter ou Ok para continuar!");
+
+	//Conversão da quantidade de notas para o seu valor respectivo.
+
+	nota100 = prompt("R$100,00?");
+
+	nota100 = nota100 * 100;
+
+	nota50 = prompt("R$50,00?");
+
+	nota50 = nota50 * 50;
+
+	nota20 = prompt("R$20,00?");
+
+	nota20 = nota20 * 20;
+
+	nota10 = prompt("R$10,00?");
+
+	nota10 = nota10 * 10;
+
+	nota5 = prompt("R$5,00?");
+
+	nota5 = nota5 * 5;
+
+	nota2 = prompt("R$2,00?");
+
+	nota2 = nota2 * 2;
+
+	m1 = prompt("Moedas de R$1,00?");
+
+	m1 = m1;
+
+	m50 = prompt("Moedas de R$0,50?");
+
+	m50 = m50 * 0.50;
+
+	m25 = prompt("Moedas de R$0,25?");
+
+	m25 = m25 * 0.25;
+
+	m10 = prompt("Moedas de R$0,10?");
+
+	m10 = m10 * 0.10;
+
+	m5 = prompt("Moedas de R$0,05?");
+
+	m5 = m5 * 0.05;
+
+
+	//Somatório de todo o caixa.
+
+	cxtotal = parseInt(nota100) + parseInt(nota50) + parseInt(nota20) + parseInt(nota10) + parseInt(nota5) + parseInt(nota2) + parseInt(m1) + parseFloat(m50) + parseFloat(m25) + parseFloat(m10) + parseFloat(m5);
+
+	cxtotal = parseFloat(cxtotal);
+
+	resp = prompt("Existe valor passado em cartão? \n \n(Digite sim ou não)");
+
+	if (resp == "sim" || resp == "Sim" || resp == "SIM")
+	{
+		cartaototal = prompt("Valor total em cartão?");
+
+		cartaototal = parseFloat(cartaototal - (cartaototal * 0.08));
+	};
+	
+	sumtotal = parseFloat(cartaototal) + parseFloat(cxtotal);
+
+	result1 = parseFloat(sumtotal) - 100;
+
+	retirada = parseFloat(cxtotal) - 100;
+
+	alert("Informações do seu caixa: " + "\n" + "\n" + "Dinheiro: R$" + cxtotal.toFixed(2) + " (Valor já incluso com o fundo de caixa!)" + "\n" + "Cartão: R$" + cartaototal.toFixed(2) + "\n" + "____________________________________" + "\n" + "Total de seu caixa foi: R$" + result1.toFixed(2) + "\n" + "____________________________________" + "\n" + "Retire R$" + retirada.toFixed(2) + " em dinheiro para o seu envelope");
+
+</script>
